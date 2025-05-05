@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Astra Chatbot</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="chat-container">
+    <header>
+      <img src="https://cdn-icons-png.flaticon.com/512/4712/4712074.png" class="avatar" alt="Astra Avatar" />
+      <h1>Astra</h1>
+    </header>
+
+    <!-- Hamburger Icon -->
+<div class="hamburger" id="hamburger" onclick="toggleSidebar()">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+<!-- Sidebar Menu -->
+<div class="sidebar" id="sidebar">
+  <ul>
+    <li onclick="window.location.href='Help.html'"><i class="fas fa-question-circle"></i> Help</li>
+    <li onclick="window.location.href='AboutAstra.html'"><i class="fas fa-robot"></i> About Astra</li>
+    <li onclick="window.location.href='ContactSupport.html'"><i class="fas fa-sign-out-alt"></i> Contact Support</li>
+  </ul>
+</div>
+
+
+    <main id="chatbox" class="chatbox">
+      <!-- Messages appear here -->
+    </main>
+
+    <div class="input-container">
+      <input type="text" id="userInput" placeholder="Ask anything..." />
+      <button id="sendBtn">➤</button>
+      <button id="voiceBtn">🎙️</button>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
