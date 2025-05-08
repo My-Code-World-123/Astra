@@ -6,11 +6,17 @@ const sendBtn = document.getElementById("sendBtn");
 // Utility: Speak text
 const speakMessage = (message) => {
   const synth = window.speechSynthesis;
+  const voices = synth.getVoices();
+
+  // Try to find a Hindi voice
+  const hindiVoice = voices.find(voice => voice.lang.includes("hi"));
+
   const utterance = new SpeechSynthesisUtterance(message);
-  utterance.voice = synth.getVoices()[0]; // You can customize the voice
+  utterance.voice = hindiVoice || voices[0]; // Fallback to default
   utterance.rate = 1;
   utterance.volume = 1;
   utterance.pitch = 1;
+
   synth.speak(utterance);
 };
 
