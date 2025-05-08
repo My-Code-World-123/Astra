@@ -305,9 +305,9 @@ function takeCommand(message) {
     window.open("https://spotify.com", "_blank");
     typeMessage("Opening Spotify...");
   }
-  else if (message.includes("open play store")) {
-    window.open("https://play.google.com", "_blank");
-    typeMessage("Opening Playstore...");
+  else if (message.includes("Lets do it")) {
+    //window.open("https://play.google.com", "_blank");
+    typeMessage("टीचर: बताओ पृथ्वी से आसमान तक क्या है? बच्चा: सर छत!");
   }
   else if (message.includes("dark mode")) {
     document.body.classList.add("dark-mode");
