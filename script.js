@@ -3,14 +3,30 @@ const chatOutput = document.getElementById("chatbox");
 const voiceBtn = document.getElementById("voiceBtn");
 const sendBtn = document.getElementById("sendBtn");
 
+function detectLanguage(text) {
+  // Basic Hindi detection using Unicode range
+  const hindiRegex = /[\u0900-\u097F]/; // Devanagari characters
+  return hindiRegex.test(text) ? "hi" : "en";
+}
+
 // Utility: Speak text
-const speakMessage = (message) => {
-  const synth = window.speechSynthesis;
-  const voices = synth.getVoices();
+function speak(message) {
+  const lang = detectLanguage(message); // 'hi' or 'en'
+  const speech = new SpeechSynthesisUtterance(message);
 
-  // Try to find a Hindi voice
-  const hindiVoice = voices.find(voice => voice.lang.includes("hi"));
+  // Set voice and language
+  if (lang === "hi") {
+    speech.lang = "hi-IN";
+    const hindiVoice = speechSynthesis.getVoices().find(voice => voice.lang === "hi-IN");
+    if (hindiVoice) speech.voice = hindiVoice;
+  } else {
+    speech.lang = "en-US";
+    const englishVoice = speechSynthesis.getVoices().find(voice => voice.lang === "en-US");
+    if (englishVoice) speech.voice = englishVoice;
+  }
 
+  window.speechSynthesis.speak(speech);
+}
   const utterance = new SpeechSynthesisUtterance(message);
   utterance.voice = hindiVoice || voices[0]; // Fallback to default
   utterance.rate = 1;
