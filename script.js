@@ -101,26 +101,16 @@ const thankYouReply = () => {
 // Utility: Random jokes
 const randomjokes = () => {
   const jokes = [
-    "Why don’t scientists trust atoms? Because they make up everything!",
-    "Why did the scarecrow win an award? Because he was outstanding in his field!",
-    "Why don’t skeletons fight each other? They don’t have the guts.",
-    "What do you call fake spaghetti? An impasta!",
-    "Why did the bicycle fall over? Because it was two-tired.",
-    "What did one wall say to the other wall? I’ll meet you at the corner.",
-    "Why can’t your nose be 12 inches long? Because then it would be a foot!",
-    "Why did the math book look sad? Because it had too many problems.",
-    "How do you organize a space party? You planet.",
-    "Why did the coffee file a police report? It got mugged.",
-    "What do you call cheese that isn’t yours? Nacho cheese.",
-    "Why don’t oysters share their pearls? Because they’re shellfish.",
-    "How does a penguin build its house? Igloos it together.",
-    "Why did the tomato turn red? Because it saw the salad dressing.",
-    "What did the janitor say when he jumped out of the closet? Supplies!",
-    "Why did the cookie go to the hospital? Because it felt crummy.",
-    "Why can’t you hear a pterodactyl go to the bathroom? Because the “P” is silent.",
-    "Why did the golfer bring two pairs of pants? In case he got a hole in one.",
-    "What do you call a belt made of watches? A waist of time.",
-    "What did one ocean say to the other ocean? Nothing, they just waved."
+    "टीचर: बताओ पृथ्वी से आसमान तक क्या है? छात्र: सर छत!",
+    "पप्पू डॉक्टर के पास: जब मैं चाय पीता हूँ तो आँख में दर्द होता है। डॉक्टर: कभी चम्मच निकाल कर पीकर देखो!",
+    "राजू: मुझे शादी नहीं करनी यार। दोस्त: क्यों? राजू: बीवी से तो माँ अच्छी है, कम से कम प्यार से मारती है!",
+    "संता: बीवी का जन्मदिन भूल गया था... अब खुद की सालगिरह ICU में मना रहा हूँ!",
+    "बॉयलर: मैं तुम्हारे बिना अधूरा हूँ... कप: जा पहले दूध तो उबाल!",
+    "पप्पू ATM में गया, स्क्रीन पर लिखा था: 'Please insert your card'... पप्पू ने लिखा: 'Dear ATM, card डाल दिया है, अब पैसे दे दो!'",
+    "गब्बर: कितने आदमी थे? बच्चा: दो सर! गब्बर: Homework किया? बच्चा: नहीं सर... गब्बर: बहुत नाइंसाफी है!",
+    "मास्टरजी: इतनी देर से कहां थे? छात्र: मास्टर जी नींद नहीं आ रही थी तो सोने चला गया!",
+    "राजू: भगवान मुझे लैपटॉप दे दो... भगवान: पहले वो पुराना पंखा तो ठीक से इस्तेमाल कर!",
+    "टीचर: इतने दिन कहां थे? छात्र: घर पर ही था, ऑनलाइन क्लास में NETWORK नहीं था!"
   ];
   return jokes[Math.floor(Math.random() * jokes.length)];
 };
